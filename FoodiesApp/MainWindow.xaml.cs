@@ -23,6 +23,7 @@ namespace FoodiesApp
         public MainWindow()
         {
             InitializeComponent();
+            Console.WriteLine("Hello World");
         }
     }
 }
