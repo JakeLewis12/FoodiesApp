@@ -34,31 +34,36 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked"
+                             Style="{StaticResource MenuButtonTheme}"Checked="RadioButton_Checked"
+                             Click="RadioButton_Click"
                              />
                 <RadioButton Content="Featured"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Click="RadioButton_Click_1"
                              />
                 <RadioButton Content="Recipies"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Click="RadioButton_Click_2"
                              />
                 <RadioButton Content="My Account"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Click="RadioButton_Click_3"
                              />
                 <RadioButton Content="About"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Click="RadioButton_Click_4"
                              />
                 
             </StackPanel>

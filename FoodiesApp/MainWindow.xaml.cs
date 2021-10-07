@@ -29,38 +29,49 @@ namespace FoodiesApp
             
         }
 
-        public class Recipe
+
+        //private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        //{
+        //    SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        //    try
+        //    {
+        //        if (sqlCon.State == System.Data.ConnectionState.Closed)
+        //            sqlCon.Open();
+        //       // String query="SELECT COUNT(1) FROM tblUser"
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        sqlCon.Close();
+        //    }
+        //}
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
-        public class UserLogin
+
+        private void RadioButton_Click_1(object sender, RoutedEventArgs e)
         {
 
         }
-        public class CreateRecipe
+
+        private void RadioButton_Click_2(object sender, RoutedEventArgs e)
         {
 
         }
-        public class FavoritesList
+
+        private void RadioButton_Click_3(object sender, RoutedEventArgs e)
         {
 
         }
-        private void buttonSubmit_Click(object sender, RoutedEventArgs e)
+
+        private void RadioButton_Click_4(object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            try
-            {
-                if (sqlCon.State == System.Data.ConnectionState.Closed)
-                    sqlCon.Open();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                sqlCon.Close();
-            }
+
         }
 
         private void RadioButton_Checked()
