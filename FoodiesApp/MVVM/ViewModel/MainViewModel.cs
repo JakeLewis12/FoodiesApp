@@ -9,7 +9,6 @@ namespace FoodiesApp.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
-        public object
         public MainViewModel()
         {
 
