@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace FoodiesApp.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interaction logic for DiscoveryView.xaml
     /// </summary>
-    public partial class HomeView : UserControl
+    public partial class DiscoveryView : UserControl
     {
-        public HomeView()
+        public DiscoveryView()
         {
             InitializeComponent();
-        }
-
-        private void Border_MouseEnter(object sender, MouseEventArgs e)
-        {
-
         }
     }
 }
