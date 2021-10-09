@@ -1,4 +1,5 @@
 ﻿using FoodiesApp.Core;
+using FoodiesApp.MVVM.Model;
 using FoodiesApp.MVVM.View;
 using System;
 using System.Collections.Generic;
