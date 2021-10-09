@@ -11,9 +11,11 @@
                 <ResourceDictionary Source="Theme/menubuttontheme.xaml"/>
                 <ResourceDictionary Source="Theme/SearchBlockTheme.xaml"/>                
             </ResourceDictionary.MergedDictionaries>
-
-            <DataTemplate DataType="{x:Type viewModel:MainViewModel}">
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
+                <view:DiscoveryView/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
