@@ -28,53 +28,32 @@ namespace FoodiesApp
             InitializeComponent();
             
         }
+        public class MenuItems
+        {
+        public string MenuName { get; set; }
+            public string MenuImage { get; set; }
+        }
+        public class HomeItems
+        {
+            public string HomeName { get; set; }
+            public string HomeImage { get; set; }
+        }
+        public class FeaturedItems
+        {
+            public string FeaturedName { get; set; }
+            public string FeaturedImage { get; set; }
+        }
+        public class RecipeItems
+        {
+            public string RecipeName { get; set; }
+            public string RecipeImage { get; set; }
 
-
-        //private void buttonLogin_Click(object sender, RoutedEventArgs e)
-        //{
-        //    SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-        //    try
-        //    {
-        //        if (sqlCon.State == System.Data.ConnectionState.Closed)
-        //            sqlCon.Open();
-        //       // String query="SELECT COUNT(1) FROM tblUser"
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        sqlCon.Close();
-        //    }
-        //}
-
-        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        }
+        public class MyAccount
         {
 
         }
-
-        private void RadioButton_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButton_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButton_Click_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButton_Click_4(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButton_Checked()
+        public class About
         {
 
         }

@@ -4,13 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModel="clr-namespace:FoodiesApp.MVVM.ViewModel"
-        xmlns:local="clr-namespace:FoodiesApp"
+        xmlns:vm="clr-namespace:FoodiesApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="920"
         WindowStyle="None"
         ResizeMode="CanResize"
         Background="Transparent"
         AllowsTransparency="True">
+  
+    
+    
+    
+    
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
@@ -24,6 +29,7 @@
         </Border.Background>
 
         <Grid>
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
@@ -33,7 +39,7 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-           
+
 
             <TextBlock Text="Foodie"
                    VerticalAlignment="Center"
@@ -55,7 +61,7 @@
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
-                             Click="RadioButton_Click"
+                           
                              />
                 <RadioButton Content="Featured"
                              Height="50"
@@ -64,15 +70,15 @@
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding DiscoveryViewCommand}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
-                             Click="RadioButton_Click_1"
+                            
                              />
-                <RadioButton Content="Recipies"
+                <RadioButton Content="Recipes"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
-                             Click="RadioButton_Click_2"
+                             
                              />
                 <RadioButton Content="My Account"
                              Height="50"
@@ -80,7 +86,7 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
-                             Click="RadioButton_Click_3"
+                             
                              />
                 <RadioButton Content="About"
                              Height="50"
@@ -88,7 +94,7 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
-                             Click="RadioButton_Click_4"
+                             
                              />
 
             </StackPanel>
@@ -101,11 +107,22 @@
                        Margin="460,0,0,0"
                        Grid.Column="1"
                        FontFamily="Fonts\Poppins-Regular.ttf"
+                        Text="{Binding FIlterText, UpdateSourceTrigger=PropertyChanged}"
                        Style="{StaticResource SearchBar}"/>
+                        
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
+
+           
+                
+                
+                
+           
         </Grid>
+          
+
+       
     </Border>
 </Window>
