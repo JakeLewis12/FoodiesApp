@@ -107,7 +107,7 @@
                        Margin="460,0,0,0"
                        Grid.Column="1"
                        FontFamily="Fonts\Poppins-Regular.ttf"
-                        Text="{Binding FIlterText, UpdateSourceTrigger=PropertyChanged}"
+                        Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
                        Style="{StaticResource SearchBar}"/>
                         
             <ContentControl Grid.Row="1"

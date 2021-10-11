@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+//using Microsoft.EntityFrameworkCore.Migrations;
 
 
 
@@ -26,6 +26,21 @@ namespace FoodiesApp.MVVM.View
     /// </summary>
     public partial class LoginView : UserControl
     {
+        public string Email { get; set; }
+        public string Username { get; set; }
+        public string PasswordHash { get; set; }
+        public DateTime DateJoined { get; set; }
+
+
+
+
+
+
+
+
+
+
+
         public LoginView()
         {
             InitializeComponent();
@@ -64,5 +79,9 @@ namespace FoodiesApp.MVVM.View
         
         }
 
+        private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,13 +10,16 @@ namespace FoodiesApp.MVVM.ViewModel
 {
     internal class MainViewModel : ObservableObject
     {
+
         public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand RecipeViewCommand { get; set; }
         public RelayCommand DiscoveryViewCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
+        public RecipesViewModel RecipeVM { get; set; }
         public DiscoveryViewModel DiscoveryVM { get; set; }
         private object _currentView;
-       public object CurrentView
+        public object CurrentView
         {
             get => _currentView;
             set
@@ -27,6 +30,7 @@ namespace FoodiesApp.MVVM.ViewModel
         }
         public MainViewModel()
         {
+            RecipeVM = new RecipesViewModel();
             HomeVM = new HomeViewModel();
             DiscoveryVM = new DiscoveryViewModel();
             CurrentView = HomeVM;
@@ -39,8 +43,15 @@ namespace FoodiesApp.MVVM.ViewModel
               {
                   CurrentView = DiscoveryVM;
               });
+            RecipeViewCommand = new RelayCommand(o =>
+              {
+                  CurrentView = RecipeVM;
+              });
         }
+
+
 
     }
 
 }
+

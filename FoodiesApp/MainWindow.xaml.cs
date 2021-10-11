@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodiesApp.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -14,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 //using System.Data.SqlClient;
+using Caliburn.Micro;
 
 namespace FoodiesApp
 {
@@ -26,11 +28,11 @@ namespace FoodiesApp
         public MainWindow()
         {
             InitializeComponent();
-            
+
         }
         public class MenuItems
         {
-        public string MenuName { get; set; }
+            public string MenuName { get; set; }
             public string MenuImage { get; set; }
         }
         public class HomeItems
@@ -57,5 +59,8 @@ namespace FoodiesApp
         {
 
         }
+        private LoginViewModel _loginVM;
+
     }
 }
+  
