@@ -18,9 +18,9 @@
             <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
                 <view:LoginView/>
              </DataTemplate>
-                
-            <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
-                <view:DiscoveryView/>
+
+            <DataTemplate DataType="{x:Type viewModel:FeaturedViewModel}">
+                <view:FeaturedView/>
             </DataTemplate>
             
             <DataTemplate DataType="{x:Type viewModel:RecipesViewModel}">
