@@ -24,7 +24,7 @@ namespace FoodiesApp.MVVM.View
     /// <summary>
     /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public class LoginView : UserControl
     {
         public string Email { get; set; }
         public string Username { get; set; }
