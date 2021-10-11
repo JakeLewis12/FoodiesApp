@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodiesApp.MVVM.ViewModel
 {
-    class DiscoveryViewModel
+    class LoginViewModel
     {
     }
 }

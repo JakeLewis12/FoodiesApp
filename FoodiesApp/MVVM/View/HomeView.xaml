@@ -63,6 +63,11 @@
                         <GradientStop Color="OrangeRed" Offset="2"/>
                     </LinearGradientBrush>
                 </Border.Background>
+                <Grid>
+                    <TextBlock DataContext=""
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+                </Grid>
             </Border>
         </StackPanel>
 

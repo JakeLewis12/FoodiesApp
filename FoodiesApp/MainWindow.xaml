@@ -68,7 +68,7 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding DiscoveryViewCommand}"
+                             Command="{Binding FeaturedViewCommand}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
                             
                              />
@@ -77,6 +77,7 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding RecipeViewCommand}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
                              
                              />

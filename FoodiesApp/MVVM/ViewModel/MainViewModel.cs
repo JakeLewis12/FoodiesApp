@@ -12,12 +12,14 @@ namespace FoodiesApp.MVVM.ViewModel
     {
 
         public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand LoginViewCommand { get; set; }
         public RelayCommand RecipeViewCommand { get; set; }
-        public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand FeaturedViewCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
+        public LoginViewModel LoginVM { get; set; }
         public RecipesViewModel RecipeVM { get; set; }
-        public DiscoveryViewModel DiscoveryVM { get; set; }
+        public FeaturedViewModel FeaturedVM { get; set; }
         private object _currentView;
         public object CurrentView
         {
@@ -30,18 +32,23 @@ namespace FoodiesApp.MVVM.ViewModel
         }
         public MainViewModel()
         {
+            LoginVM = new LoginViewModel();
             RecipeVM = new RecipesViewModel();
             HomeVM = new HomeViewModel();
-            DiscoveryVM = new DiscoveryViewModel();
+            FeaturedVM = new FeaturedViewModel();
             CurrentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o =>
               {
                   CurrentView = HomeVM;
               });
-            DiscoveryViewCommand = new RelayCommand(o =>
+            LoginViewCommand = new RelayCommand(o =>
               {
-                  CurrentView = DiscoveryVM;
+                  CurrentView = LoginVM;
+              });
+            FeaturedViewCommand = new RelayCommand(o =>
+              {
+                  CurrentView = FeaturedVM;
               });
             RecipeViewCommand = new RelayCommand(o =>
               {
