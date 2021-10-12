@@ -27,6 +27,14 @@
                 <view:RecipesView/>
             </DataTemplate>
             
+            <DataTemplate DataType="{x:Type viewModel:MyAccountViewModel1}">
+                <view:MyAccountView1/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:AboutViewModel1}">
+                <view:AboutView1/>
+            </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

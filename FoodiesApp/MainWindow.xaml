@@ -86,6 +86,7 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding MyAccountViewCommand}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
                              
                              />
@@ -94,6 +95,7 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AboutViewCommand}"
                              FontFamily="Fonts\Poppins-Regular.ttf"
                              
                              />
@@ -110,20 +112,11 @@
                        FontFamily="Fonts\Poppins-Regular.ttf"
                         Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
                        Style="{StaticResource SearchBar}"/>
-                        
+
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
-
-           
-                
-                
-                
-           
-        </Grid>
-          
-
-       
+        </Grid>          
     </Border>
 </Window>

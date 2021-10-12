@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace FoodiesApp.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MyAccountView.xaml
+    /// Interaction logic for AboutView1.xaml
     /// </summary>
-    public partial class MyAccountView : UserControl
+    public partial class AboutView1 : UserControl
     {
-        public MyAccountView()
+        public AboutView1()
         {
             InitializeComponent();
         }
