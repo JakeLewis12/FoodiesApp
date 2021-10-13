@@ -43,5 +43,6 @@ namespace FoodiesApp.MVVM.View
             //ContentControl 
 
         }
+
     }
 }
