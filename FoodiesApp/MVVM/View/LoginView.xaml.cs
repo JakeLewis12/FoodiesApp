@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -24,64 +25,35 @@ namespace FoodiesApp.MVVM.View
     /// <summary>
     /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public partial class LoginView : UserControl 
     {
-        public string Email { get; set; }
-        public string Username { get; set; }
-        public string PasswordHash { get; set; }
-        public DateTime DateJoined { get; set; }
-
-
-
-
-
-
-
-
-
-
-
         public LoginView()
         {
             InitializeComponent();
         }
-
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        private void loginBtn_Click(Object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            try
-            {
-                if (sqlCon.State == System.Data.ConnectionState.Closed)
-                    sqlCon.Open();
-                String query = "SELECT COUNT(1) FROM tblUser WHERE Username=@Username AND Password=@Password";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                sqlCmd.CommandType = System.Data.CommandType.Text;
-                sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text);
-                sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Password);
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                if(count==1)
-                {
-                    MainWindow dashboard = new MainWindow();
-                    dashboard.Show();
-                    sqlCon.Close();
-                    
-                }
+            DataSet1TableAdapters.UserLoginTableAdapter adp = new DataSet1TableAdapters.UserLoginTableAdapter();
+            DataTable table = adp.GetData();
 
-            }
-            catch (Exception ex)
+            string UserName = null;
+            string Password = null;
+
+            foreach (DataRow row in table.Rows)
             {
-                MessageBox.Show(ex.Message);
+                UserName = row["UserName"].ToString();
+                Password = row["Password"].ToString();
             }
-            finally
+            if(UserName.Contains(txtUsername.Text) && Password.Contains(txtPassword.Text))
             {
-                sqlCon.Close();
+                LoginView loginView = new LoginView();
+                MainWindow mainWindow = new MainWindow();
+                this.Close();
+                mainWindow.Show();
+            
             }
-        
         }
-
-        private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+     
+    
     }
 }
