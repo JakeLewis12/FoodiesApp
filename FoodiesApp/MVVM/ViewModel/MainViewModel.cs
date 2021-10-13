@@ -12,11 +12,17 @@ namespace FoodiesApp.MVVM.ViewModel
     {
 
         public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand ClickedViewCommand { get; set; }
+        public RelayCommand MyAccountViewCommand { get; set; }
         public RelayCommand LoginViewCommand { get; set; }
         public RelayCommand RecipeViewCommand { get; set; }
         public RelayCommand FeaturedViewCommand { get; set; }
+        public RelayCommand AboutViewCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
+        public ClickedViewModel ClickedVM { get; set; }
+        public AboutViewModel1 AboutVM { get; set; }
+        public MyAccountViewModel1 MyAccountVM { get; set; }
         public LoginViewModel LoginVM { get; set; }
         public RecipesViewModel RecipeVM { get; set; }
         public FeaturedViewModel FeaturedVM { get; set; }
@@ -33,14 +39,25 @@ namespace FoodiesApp.MVVM.ViewModel
         public MainViewModel()
         {
             LoginVM = new LoginViewModel();
+            ClickedVM = new ClickedViewModel();
             RecipeVM = new RecipesViewModel();
             HomeVM = new HomeViewModel();
             FeaturedVM = new FeaturedViewModel();
+            MyAccountVM = new MyAccountViewModel1();
+            AboutVM = new AboutViewModel1();
             CurrentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o =>
               {
                   CurrentView = HomeVM;
+              });
+            ClickedViewCommand = new RelayCommand(o =>
+              {
+                  CurrentView = ClickedVM;
+              });
+            MyAccountViewCommand = new RelayCommand(o =>
+              {
+                  CurrentView = MyAccountVM;
               });
             LoginViewCommand = new RelayCommand(o =>
               {
@@ -53,6 +70,10 @@ namespace FoodiesApp.MVVM.ViewModel
             RecipeViewCommand = new RelayCommand(o =>
               {
                   CurrentView = RecipeVM;
+              });
+            AboutViewCommand = new RelayCommand(o =>
+              {
+                  CurrentView = AboutVM;
               });
         }
 

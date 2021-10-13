@@ -10,7 +10,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="650">
     <StackPanel>
-        <TextBlock Text="Foodies' Recipes"
+        <TextBlock Text="Recipes"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Center"
@@ -58,7 +58,7 @@
             <Border Width="200"
                     Height="200"
                     CornerRadius="10"
-                    Margin="45,0,0,0">
+                    Margin="25,0,0,0">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="Orange" Offset="1.0"/>
@@ -67,11 +67,10 @@
                 </Border.Background>
             </Border>
         </StackPanel>
-
-        <StackPanel>
+        <StackPanel Height="196">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="15,0,0,0"/>
+                    <Setter Property="Margin" Value="10,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
 

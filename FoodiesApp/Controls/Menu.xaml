@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="FoodiesApp.Controls.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FoodiesApp.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <TextBlock Text="Foodie"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="AliceBlue"
+                   FontSize="22" Margin="34,0,0,0">
+
+            </TextBlock>
+
+            <StackPanel Grid.Row="1">
+
+
+                <RadioButton Content="Home"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"  
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"
+                             FontFamily="Fonts\Poppins-Regular.ttf"
+                           
+                             />
+                <RadioButton Content="Featured"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding FeaturedViewCommand}"
+                             FontFamily="Fonts\Poppins-Regular.ttf"
+                            
+                             />
+                <RadioButton Content="Recipes"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding RecipeViewCommand}"
+                             FontFamily="Fonts\Poppins-Regular.ttf"
+                             
+                             />
+                <RadioButton Content="My Account"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding MyAccountViewCommand}"
+                             FontFamily="Fonts\Poppins-Regular.ttf"
+                             
+                             />
+                <RadioButton Content="About"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AboutViewCommand}"
+                             FontFamily="Fonts\Poppins-Regular.ttf"
+                             
+                             />
+
+            </StackPanel>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+            <!--<StackPanel MouseDown="StackPanel_MouseDown"
+                        Orientation="Horizontal"
+                        Grid.Column="1"
+                        Opacity="0"
+                        Background="White"
+                        />
+            <Button Grid.Column="1"
+                    Click="Button_Click"
+                    Height="20" Margin="690,10,9,45"
+                    Background="{Binding}">
+                <Button.Content>
+                    <Image Source="D:\Foodie\FoodiesApp\Images\X.png" Height="10" Width="10"/>
+                </Button.Content>
+            </Button>-->
+            <TextBox Width="250"
+                       Height="46"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="460,0,0,0"
+                       Grid.Column="1"
+                       FontFamily="Fonts\Poppins-Regular.ttf"
+                       Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
+                       Style="{StaticResource SearchBar}"/>
+
+
+
+
+
+        </Grid>
+
+    </Grid>
+</UserControl>

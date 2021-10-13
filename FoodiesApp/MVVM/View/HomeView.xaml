@@ -4,53 +4,77 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FoodiesApp.MVVM.View" 
-             xmlns:viewmodel="clr-namespace:FoodiesApp.MVVM.ViewModel"
+             xmlns:viewModel="clr-namespace:FoodiesApp.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewModel:MainViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    
+
     <StackPanel>
-        <TextBlock Text="Discover"
+        <TextBlock Text="Discover Recipies"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Center"
                    Margin="0,10,0,10"
                    FontFamily="Fonts\Poppins-Regular.ttf"/>
+        
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <Border Height="200"
                     Width="400">
+
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <ImageBrush ImageSource="D:\Foodie\FoodiesApp\Images\original.jpg"
+                                Stretch="UniformToFill"
+                                Opacity=".9">
+
+                    </ImageBrush>
+                    <!--<LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="CadetBlue" Offset="0.0"/>
                         <GradientStop Color="Aqua" Offset="1"/>
-                    </LinearGradientBrush>
+                    </LinearGradientBrush>-->
                 </Border.Background>
+
+
+
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
                                        Rect="0,0,400,200"/>
                 </Border.Clip>
                 <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Yummy Foods!"
-                                   Foreground="White"
+
+                    <Button Click="Button_Click"
+                        Command="{}">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="{Binding}"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="{Binding}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <StackPanel>
+                            <TextBlock Text="Yummy Foods!"
+                                   Foreground="Wheat"
                                    FontSize="28"
-                                   Margin="20,10,10,0"/>
-                        <TextBlock Text="Check out what's in here"
+                                   Width="Auto"
+                                   FontWeight="ExtraBold"
+                                       FontStyle="Oblique"
+                                       HorizontalAlignment="Left"/>
+
+                            <TextBlock Text="Check out what's in here"
                                    Foreground="White"
-                                   FontSize="18"
-                                   Margin="20,10,10,0"/>
-                    </StackPanel>
-                    <Image
-                           Source="D:\Foodie\FoodiesApp\Images\original.jpg" Margin="6,43,-91,-255" RenderTransformOrigin="0.5,0.5">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform Angle="-26.163"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
+                                   FontSize="18" 
+                                       Width="Auto"
+                                       />
+                        </StackPanel>
+
+                    </Button>
                 </Grid>
             </Border>
             <Border Width="200"
@@ -105,8 +129,9 @@
                         CornerRadius="10"/>
 
             </StackPanel>
-        </StackPanel>
 
+        </StackPanel>
     </StackPanel>
+
 </UserControl>
 
