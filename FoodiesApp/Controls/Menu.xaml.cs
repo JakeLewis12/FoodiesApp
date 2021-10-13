@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace FoodiesApp.Controls
 {
     /// <summary>
-    /// Interaction logic for MenuSelector.xaml
+    /// Interaction logic for Menu.xaml
     /// </summary>
-    public partial class MenuSelector : UserControl
+    public partial class Menu : UserControl
     {
-        public MenuSelector()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

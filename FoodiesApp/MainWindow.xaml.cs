@@ -61,8 +61,6 @@ namespace FoodiesApp
         }
         //private LoginViewModel _loginVM;
 
-
-
         private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -77,6 +75,8 @@ namespace FoodiesApp
             Close();
 
         }
+
+
     }
 }
 
