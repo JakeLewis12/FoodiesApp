@@ -34,14 +34,7 @@ namespace FoodiesApp.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //MainViewModel main = new MainViewModel();
-            //ClickedViewCommand = new RelayCommand(o =>
-            //{
-            //    CurrentView = ClickedVM;
-            //});
-
-            //ContentControl 
-
+            
         }
     }
 }

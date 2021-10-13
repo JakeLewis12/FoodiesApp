@@ -6,6 +6,9 @@
              xmlns:local="clr-namespace:FoodiesApp.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Template>
+        <ControlTemplate TargetType="UserControl">
+            
     <Grid>
         <Grid>
 
@@ -34,16 +37,16 @@
             <StackPanel Grid.Row="1">
 
 
-                <RadioButton Content="Home"
+                        <RadioButton Content="Home"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"  
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"
-                             FontFamily="Fonts\Poppins-Regular.ttf"
-                           
-                             />
+                             FontFamily="Fonts\Poppins-Regular.ttf"                           
+                             >
+                        </RadioButton>
                 <RadioButton Content="Featured"
                              Height="50"
                              Foreground="White"
@@ -110,12 +113,17 @@
                        FontFamily="Fonts\Poppins-Regular.ttf"
                        Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
                        Style="{StaticResource SearchBar}"/>
+                    
 
 
 
 
 
-        </Grid>
+
+                </Grid>
 
     </Grid>
+            
+        </ControlTemplate>
+    </UserControl.Template>
 </UserControl>

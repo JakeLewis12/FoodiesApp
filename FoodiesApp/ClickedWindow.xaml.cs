@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FoodiesApp.MVVM.View
+namespace FoodiesApp
 {
     /// <summary>
-    /// Interaction logic for FeaturedView.xaml
+    /// Interaction logic for ClickedWindow.xaml
     /// </summary>
-    public partial class FeaturedView : UserControl
+    public partial class ClickedWindow : Window
     {
-        public FeaturedView()
+        public ClickedWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

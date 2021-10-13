@@ -83,10 +83,13 @@
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
                 <Border Width="150"
-                        Height="150"
-                        Background="LightCoral"
+                        Height="150"                        
                         CornerRadius="10">
-                    <TextBlock Text="Pumpkin Spice Latte!"
+                    <Border.Background>
+                        <ImageBrush ImageSource="Database"/>
+                    </Border.Background>
+                    
+                    <TextBlock Text="Database"
                                HorizontalAlignment="Center"
                                    Foreground="White"
                                    FontSize="14"

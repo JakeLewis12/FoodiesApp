@@ -27,6 +27,16 @@ namespace FoodiesApp.MVVM.ViewModel
         public RecipesViewModel RecipeVM { get; set; }
         public FeaturedViewModel FeaturedVM { get; set; }
         private object _currentView;
+        private object _secondView;
+        public object SecondView
+        {
+            get => _secondView;
+            set
+            {
+                _currentView = value;
+
+            }
+        }
         public object CurrentView
         {
             get => _currentView;
@@ -46,35 +56,44 @@ namespace FoodiesApp.MVVM.ViewModel
             MyAccountVM = new MyAccountViewModel1();
             AboutVM = new AboutViewModel1();
             CurrentView = HomeVM;
+            SecondView = null;
 
-            HomeViewCommand = new RelayCommand(o =>
-              {
-                  CurrentView = HomeVM;
-              });
-            ClickedViewCommand = new RelayCommand(o =>
-              {
-                  CurrentView = ClickedVM;
-              });
-            MyAccountViewCommand = new RelayCommand(o =>
-              {
-                  CurrentView = MyAccountVM;
-              });
-            LoginViewCommand = new RelayCommand(o =>
-              {
-                  CurrentView = LoginVM;
-              });
-            FeaturedViewCommand = new RelayCommand(o =>
-              {
-                  CurrentView = FeaturedVM;
-              });
-            RecipeViewCommand = new RelayCommand(o =>
-              {
-                  CurrentView = RecipeVM;
-              });
-            AboutViewCommand = new RelayCommand(o =>
-              {
-                  CurrentView = AboutVM;
-              });
+            if (SecondView == null)
+            {
+
+                HomeViewCommand = new RelayCommand(o =>
+                  {
+                      CurrentView = HomeVM;
+                  });
+                ClickedViewCommand = new RelayCommand(o =>
+                  {
+                      CurrentView = ClickedVM;
+                  });
+                MyAccountViewCommand = new RelayCommand(o =>
+                  {
+                      CurrentView = MyAccountVM;
+                  });
+                LoginViewCommand = new RelayCommand(o =>
+                  {
+                      CurrentView = LoginVM;
+                  });
+                FeaturedViewCommand = new RelayCommand(o =>
+                  {
+                      CurrentView = FeaturedVM;
+                  });
+                RecipeViewCommand = new RelayCommand(o =>
+                  {
+                      CurrentView = RecipeVM;
+                  });
+                AboutViewCommand = new RelayCommand(o =>
+                  {
+                      CurrentView = AboutVM;
+                  });
+            }
+            else
+            {
+                CurrentView = SecondView;
+            }
         }
 
 

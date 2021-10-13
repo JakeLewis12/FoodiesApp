@@ -25,7 +25,7 @@
                 <GradientStop Color="Aqua" Offset="1"/>
             </LinearGradientBrush>
         </Border.Background>
-        
+         
         <local:Menu>
             
         </local:Menu>
