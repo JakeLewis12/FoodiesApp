@@ -12,6 +12,7 @@ namespace FoodiesApp.MVVM.ViewModel
     {
 
         public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand ClickedViewCommand { get; set; }
         public RelayCommand MyAccountViewCommand { get; set; }
         public RelayCommand LoginViewCommand { get; set; }
         public RelayCommand RecipeViewCommand { get; set; }
@@ -19,6 +20,7 @@ namespace FoodiesApp.MVVM.ViewModel
         public RelayCommand AboutViewCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
+        public ClickedViewModel ClickedVM { get; set; }
         public AboutViewModel1 AboutVM { get; set; }
         public MyAccountViewModel1 MyAccountVM { get; set; }
         public LoginViewModel LoginVM { get; set; }
@@ -37,6 +39,7 @@ namespace FoodiesApp.MVVM.ViewModel
         public MainViewModel()
         {
             LoginVM = new LoginViewModel();
+            ClickedVM = new ClickedViewModel();
             RecipeVM = new RecipesViewModel();
             HomeVM = new HomeViewModel();
             FeaturedVM = new FeaturedViewModel();
@@ -47,6 +50,10 @@ namespace FoodiesApp.MVVM.ViewModel
             HomeViewCommand = new RelayCommand(o =>
               {
                   CurrentView = HomeVM;
+              });
+            ClickedViewCommand = new RelayCommand(o =>
+              {
+                  CurrentView = ClickedVM;
               });
             MyAccountViewCommand = new RelayCommand(o =>
               {

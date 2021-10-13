@@ -11,16 +11,13 @@
         ResizeMode="CanResize"
         Background="Transparent"
         AllowsTransparency="True">
-  
-    
-    
-    
-    
+
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
     <Border CornerRadius="20">
+
         <Border.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                 <GradientStop Color="RoyalBlue" Offset="0.0"/>
@@ -29,15 +26,18 @@
         </Border.Background>
 
         <Grid>
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="auto">
+                </ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
 
@@ -48,7 +48,6 @@
                    FontSize="22" Margin="34,0,0,0">
 
             </TextBlock>
-
 
             <StackPanel Grid.Row="1">
 
@@ -102,21 +101,38 @@
 
             </StackPanel>
 
-
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+            <StackPanel MouseDown="StackPanel_MouseDown"
+                        Orientation="Horizontal"
+                        Grid.Column="1"
+                        Opacity="0"
+                        Background="White"
+                        />
+            <Button Grid.Column="1"
+                    Click="Button_Click"
+                    Height="20" Margin="690,10,9,45"
+                    Background="{Binding}">
+                <Button.Content>
+                    <Image Source="D:\Foodie\FoodiesApp\Images\X.png" Height="10" Width="10"/>
+                </Button.Content>
+            </Button>
             <TextBox Width="250"
-                       Height="40"
+                       Height="46"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Margin="460,0,0,0"
                        Grid.Column="1"
                        FontFamily="Fonts\Poppins-Regular.ttf"
-                        Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
+                       Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
                        Style="{StaticResource SearchBar}"/>
 
-            <ContentControl Grid.Row="1"
-                            Grid.Column="1"
-                            Margin="10"
-                            Content="{Binding CurrentView}"/>
-        </Grid>          
+
+
+
+
+        </Grid>
     </Border>
 </Window>

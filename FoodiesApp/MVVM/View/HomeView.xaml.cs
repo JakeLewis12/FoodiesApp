@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FoodiesApp.Core;
+using FoodiesApp.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,8 +27,20 @@ namespace FoodiesApp.MVVM.View
             InitializeComponent();
         }
 
-        private void Border_MouseEnter(object sender, MouseEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+           
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //MainViewModel main = new MainViewModel();
+            //ClickedViewCommand = new RelayCommand(o =>
+            //{
+            //    CurrentView = ClickedVM;
+            //});
+
+            //ContentControl 
 
         }
     }
