@@ -87,7 +87,7 @@
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
-            <StackPanel MouseDown="StackPanel_MouseDown"
+            <!--<StackPanel MouseDown="StackPanel_MouseDown"
                         Orientation="Horizontal"
                         Grid.Column="1"
                         Opacity="0"
@@ -100,7 +100,7 @@
                 <Button.Content>
                     <Image Source="D:\Foodie\FoodiesApp\Images\X.png" Height="10" Width="10"/>
                 </Button.Content>
-            </Button>
+            </Button>-->
             <TextBox Width="250"
                        Height="46"
                        VerticalAlignment="Center"
