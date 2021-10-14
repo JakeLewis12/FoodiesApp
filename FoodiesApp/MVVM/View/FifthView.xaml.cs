@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FoodiesApp
+namespace FoodiesApp.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for ClickedWindow.xaml
+    /// Interaction logic for FifthView.xaml
     /// </summary>
-    public partial class ClickedWindow : Window
+    public partial class FifthView : UserControl
     {
-        public ClickedWindow()
+        public FifthView()
         {
             InitializeComponent();
         }

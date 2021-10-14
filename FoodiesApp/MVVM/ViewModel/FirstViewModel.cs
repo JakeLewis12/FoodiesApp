@@ -1,6 +1,6 @@
 ﻿namespace FoodiesApp.MVVM.ViewModel
 {
-    class FeaturedViewModel
+    class FirstViewModel
     {
     }
 }

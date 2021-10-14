@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace FoodiesApp.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for ClickedView.xaml
+    /// Interaction logic for SecondView.xaml
     /// </summary>
-    public partial class ClickedView : UserControl
+    public partial class SecondView : UserControl
     {
-        public ClickedView()
+        public SecondView()
         {
             InitializeComponent();
         }
