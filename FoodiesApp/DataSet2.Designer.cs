@@ -289,7 +289,7 @@ namespace FoodiesApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PaellaRecipeDataTable() {
+            public PaellaRecipeDataTable(string connString) {
                 this.TableName = "PaellaRecipe";
                 this.BeginInit();
                 this.InitClass();
