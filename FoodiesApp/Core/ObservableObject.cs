@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Data;
 using static FoodiesApp.MainWindow;
 
@@ -65,7 +60,7 @@ namespace FoodiesApp.Core
             if (_item.MenuName.ToUpper().Contains(FilterText.ToUpper()))
             {
                 e.Accepted = true;
-            
+
             }
             else
             {
@@ -81,7 +76,7 @@ namespace FoodiesApp.Core
 
 
 
-       
+
 
 
     }

@@ -3,11 +3,11 @@
 namespace FoodiesApp.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for AboutView1.xaml
+    /// Interaction logic for FirstView.xaml
     /// </summary>
-    public partial class AboutView1 : UserControl
+    public partial class FirstView : UserControl
     {
-        public AboutView1()
+        public FirstView()
         {
             InitializeComponent();
         }

@@ -82,15 +82,10 @@
 
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Border.Background>
-                    <ImageSource=""/>
-                    Width="150"
+                <Border Width="150"
                         Height="150"
                         Background="LightCoral"
                         CornerRadius="10">
-                    
-                        
-                    
                     <TextBlock Text="Pumpkin Spice Latte!"
                                HorizontalAlignment="Center"
                                    Foreground="White"
